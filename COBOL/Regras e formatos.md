@@ -39,12 +39,12 @@ Ignorada pelo compilador pode ficar em branco ou ser usada para qualquer propós
 
 ## Estrutura
 
-COBOL possuí uma estrutura hierarquica:
+COBOL possuí uma estrutura hiêrarquica:
 
 - Programa
   - Divisões
     - Seções
-      - Paragrafos
+      - Parágrafos
         - Frase
           - Comandos
 
@@ -62,7 +62,7 @@ Algumas palavras reservadas usadas para alterar a sequencia de execução basead
 
 ## Scope Terminator
 
-Pode ser explicito ou implicito, o explicito marca o fim de uma declaração Procedure Division utilizando o `END-`. Todo verbo condicional (IF, EVALUATE) ou uma clausula condicional (COMPUTE, PERFORM, READ) terá um finalizador de escopo. O implicito é um ponto final (.), ele termina todos os escopos anteriores que aind não foram finalizados.
+Pode ser explicito ou implícito, o explicito marca o fim de um comando Procedure Division utilizando o `END-`. Todo verbo condicional (IF, EVALUATE) ou uma clausula condicional (COMPUTE, PERFORM, READ) terá um finalizador de escopo. O implícito é um ponto final (.), ele termina todos os escopos anteriores que ainda não foram finalizados.
 
 ## Frases
 
@@ -72,5 +72,42 @@ Em COBOL frases - *sentences*  são um ou mais declarações seguidas por um pon
 
 Parágrafo pode ser definido pelo usuário ou predefinido e seguido por um ponto final (.). O parágrafo consiste em 0 ou mais frases e é uma subdivisão da Seção ou Divisão.
 
-![[Pasted image 20230115115818.png]]
+<img width= "350" src="https://github.com/BrunoOlivei/12in23/blob/main/Anexos/Pasted%20image%2020230115115818.png">
+
+## Seção
+
+Uma seção pode ser definida pelo usuário ou predefinida seguida por um ponto final, possui 0 ou muitas frases. Uma seção é uma coleção de parágrafos.
+
+## Divisão
+
+Divisões são subdivididas em Seções.
+Seções são subdivididas em Parágrafos.
+Parágrafos são subdivididos em Frases.
+Frases consistem em Comandos.
+Comandos começam com palavras reservadas do COBOL e podem ser subdivididos em frases.
+
+## Quatro tipos de divisões
+
+### 1. IDENTIFICATION DIVISION
+
+Identifica o programa com o nome, opcionalmente pode conter outras informações como nome do autor, data da compilação, etc.
+
+### 2. ENVIROMENT DIVISION
+
+Descreve os aspectos do programa que dependem de variáveis de ambiente como tipo de configuração e as entradas e saídas.
+
+### 3. DATA DIVISION
+
+São as características dos dados definidas nas seguintes seções:
+
+- FILE SECTION: Define os dados usados nas operações de entrada e saída.
+- LINKAGE SECTION: Descreve os dados de outros programas que serão processados no programa em questão.
+- WORKING-STORAGE SECTION: Armazenamento alocado para o programa.
+- LOCAL-STORAGE SECTION: Armazenamento alocado cada vez que o programa é rodado até o fim.
+
+### 4. PROCEDURE DIVISION
+
+Contém instruções relacionadas a manipulação dos dados e interfaces com outros procedimentos.
+
+## PROCEDURE DIVISION explicada
 
