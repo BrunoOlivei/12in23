@@ -39,7 +39,7 @@ Ignorada pelo compilador pode ficar em branco ou ser usada para qualquer propós
 
 ## Estrutura
 
-COBOL possuí uma estrutura hiêrarquica:
+COBOL possuí uma estrutura hierárquica:
 
 - Programa
   - Divisões
@@ -111,3 +111,9 @@ Contém instruções relacionadas a manipulação dos dados e interfaces com out
 
 ## PROCEDURE DIVISION explicada
 
+A `PROCEDURE DIVISION` é onde a mágica acontece, onde os comandos são executados pelo programa. O `PROCEDURE DIVISION` de um programa é dividido em seções e parágrafos, que contém frases e comandos:
+
+- Seção: subdivisão lógica. Opcionalmente pode conter um cabeçalho e seguido por um ou mais parágrafos. A seção pode ser um contexto para a declaração `PERFORM`. Um tipo de seção é a declarativa que é um conjunto de uma ou mais seções com **propósitos especiais**. As seções com propósito especial contêm descrições sobre entradas e saídas, por exemplo. São escritas no começo do `PROCEDURE DIVISION` e começam com a palavra reservada `DECLARATIVES` e finaliza com `END DECLARATIVES`.
+- Parágrafos: são subdivisões das seções o parágrafo pode ser o assunto (subject) de um comando (statement).
+- Frases: uma série de um ou mais comandos COBOL finalizados por um ponto final (.).
+- Comandos: uma ação que precisa ser executada no pelo programa como por exemplo adicionar dois números.
