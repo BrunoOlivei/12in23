@@ -64,4 +64,13 @@ Algumas palavras reservadas usadas para alterar a sequencia de execução basead
 
 Pode ser explicito ou implicito, o explicito marca o fim de uma declaração Procedure Division utilizando o `END-`. Todo verbo condicional (IF, EVALUATE) ou uma clausula condicional (COMPUTE, PERFORM, READ) terá um finalizador de escopo. O implicito é um ponto final (.), ele termina todos os escopos anteriores que aind não foram finalizados.
 
-## Seções
+## Frases
+
+Em COBOL frases - *sentences*  são um ou mais declarações seguidas por um ponto final (.), onde o ponto indica o fim do escopo.
+
+## Parágrafo
+
+Parágrafo pode ser definido pelo usuário ou predefinido e seguido por um ponto final (.). O parágrafo consiste em 0 ou mais frases e é uma subdivisão da Seção ou Divisão.
+
+![[Pasted image 20230115115818.png]]
+
